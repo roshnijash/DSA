@@ -1,0 +1,70 @@
+
+----------------------------------------------------------------------------------------------  BRUTE FORCE WOTH SORTING -------------------------------------------------------------------------------
+#include <iostream>
+using namespace std;
+int main() {
+int n;
+cin>>n;
+
+int arr[n],i,j;
+
+//insert values into array
+for(i=0;i<n;i++)
+{
+cin>>arr[i];
+}
+
+//perform BUBLE sorting in ascending order
+for(i=0;i<n-1;i++)
+{
+    for(j=0;j<n-i-1;j++)
+{
+    // SWAP
+    if(arr[j]>arr[j+1])
+    {
+       int temp=arr[j];
+        arr[j]=arr[j+1];
+        arr[j+1]=temp;
+    }
+}    
+}
+
+//display array
+for(i=0;i<n;i++)
+{
+cout<<arr[i]<<" ";
+}
+
+cout<<"\nThe largest element in the array is "<<arr[n-1];
+
+
+
+// THE 2ND LARGEST ELEMENT IS
+
+int largest=arr[n-1];
+int SecondLargest=-1;
+
+for(i=n-2;i>=0;i--)
+{
+    if(arr[i]!=largest)
+    {
+    SecondLargest=arr[i];
+    break;
+// break for => the pervious one element which is smaller than largest
+//{4, 5, 8, 9, 9}
+    }
+}
+
+cout<<"\nThe 2nd largest element in the array is "<<SecondLargest;
+
+
+    return 0;
+}
+
+
+
+-------------------------------------------------------------------------- BETTER APPROACH -------------------------------------------------------------------------------------
+
+
+
+
