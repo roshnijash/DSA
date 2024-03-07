@@ -65,6 +65,63 @@ cout<<"\nThe 2nd largest element in the array is "<<SecondLargest;
 
 -------------------------------------------------------------------------- BETTER APPROACH -------------------------------------------------------------------------------------
 
+#include <iostream>
+using namespace std;
+int main() {
+int n;
+cin>>n;
+
+int arr[n],i;
+
+//insert values into array
+for(i=0;i<n;i++)
+{
+cin>>arr[i];
+}
+
+//COMPARING ARR[0] WITH EACH ELEMENT
+int largest=arr[0];
+
+for(i=0;i<n;i++)
+{
+    if(arr[i]>largest)
+    {
+        largest=arr[i];
+        
+    }
+}
+//display array
+for(i=0;i<n;i++)
+{
+cout<<arr[i]<<" ";
+}
+
+
+// THE LARGEST ELEMENT IS 
+
+cout<<"\nThe largest element in the array is "<<largest;
+
+
+int Secondlargest =-1;
+
+for(i=0;i<n;i++){
+    if(arr[i]>Secondlargest && largest>arr[i]){
+    Secondlargest=arr[i];
+    }
+}
+
+cout<<"\nThe 2nd largest element in the array is "<<Secondlargest;
+
+
+    return 0;
+}
+
+
+
+
+-----------------------------------------------------------------------------------------------------------OPTIMAL APPROACH----------------------------------------------
+
+
 
 
 
