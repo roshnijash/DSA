@@ -116,12 +116,58 @@ cout<<"\nThe 2nd largest element in the array is "<<Secondlargest;
     return 0;
 }
 
-
+TIME COMPLEXITY O(2n)
 
 
 -----------------------------------------------------------------------------------------------------------OPTIMAL APPROACH----------------------------------------------
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+int main() {
+int n;
+cin>>n;
+
+int arr[n],i;
+
+//insert values into array
+for(i=0;i<n;i++)
+{
+cin>>arr[i];
+}
+
+//display array
+for(i=0;i<n;i++)
+{
+cout<<arr[i]<<" ";
+}
+
+int large=arr[0], Secondlarge=-1;
+
+
+for(i=0;i<n;i++)
+{
+    if(arr[i]>large)
+    {
+        Secondlarge=large;
+        large=arr[i];
+    }
+    else if(arr[i]<large && arr[i]>Secondlarge)
+    {
+        Secondlarge=arr[i];
+    }
+}
 
 
 
+cout<<"\nThe largest element in the array is "<<large;
+cout<<"\nThe 2ND largest element in the array is "<<Secondlarge;
 
 
+
+    return 0;
+}
+
+
+
+TIME COMPLEXITY ----> O(n)
