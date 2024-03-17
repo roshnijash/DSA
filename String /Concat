@@ -10,16 +10,37 @@ int main() {
     string v =s;
 // concatenation
 
-cout<<s<<" "<<t<<"\n";
+cout<<v<<" "<<t<<"\n";
 
 // or with append fn
-string st=s.append(t);
+string st=v.append(t);
 cout<<st<<"\n";
 
 //Length 
-int lengths=v.size();
+int lengths=s.size();
 cout<<lengths<<"\n";
 
+
+// Access String elements
+
+cout<<s[0]<<"\n";
+
+s[1]='5';
+
+cout<<s[1]<<"\n";
+cout<<s<<"\n";
+
+
+//    ..............  \'', \"", \\ insert special chars
+
+
+
+string fullname;
+// cin>>fullname;
+// cout<<fullname<<endl;
+//only print the 1st word so we have to insert getline()
+getline(cin,fullname);
+cout<<fullname;
 
 
     return 0;
